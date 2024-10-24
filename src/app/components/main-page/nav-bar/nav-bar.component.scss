@@ -1,0 +1,78 @@
+.navbar{
+    background-color: aqua;
+}
+
+.width{
+    width: 1200px;
+}
+.top-nav-el{
+    margin-right: 14px;
+    margin-left: 14px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.navbar.d-flex.flex-column{
+    flex-direction: row !important;
+}
+
+img{
+    width: 104px;
+    height: 37px;
+}
+
+.top-nav-btn{
+    border: none !important;
+    background-color: transparent;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.top-nav-btn:hover{
+    background-color: transparent;
+    color: black;
+}
+
+.top-nav-btn:focus{
+    background-color: transparent;
+    color: black;
+    outline: none; /* Remove the outline */
+    box-shadow: none; /* Remove the box shadow */
+}
+
+.top-nav-btn:focus-visible{
+    background-color: transparent;
+    color: black;
+    border: none !important;
+    outline: none; /* Remove the outline */
+    box-shadow: none; /* Remove the box shadow */
+}
+
+.top-nav-btn:active{
+    background-color: transparent;
+    color: black;
+    border: none !important;
+    outline: none; /* Remove the outline */
+    box-shadow: none; /* Remove the box shadow */
+}
+
+.globe.top-nav-btn{
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.globe{
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.dropdown-menu.show{
+    inset: 0px -65px auto auto !important;
+}
+
+.nav-link{
+    font-weight: 380;
+    font-size: 16px;
+}

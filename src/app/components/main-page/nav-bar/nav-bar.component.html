@@ -1,0 +1,66 @@
+<div class="navbar d-flex flex-column w-100 align-items-center justify-content-center">
+    <div class="width px-2">
+        <div class="top-nav d-flex align-items-center justify-content-end my-2 w-100" >
+            <div class="top-nav-el mx-2">Aura login</div>
+            <div
+                class="btn-group top-nav-el"
+                ngbDropdown
+                role="group"
+                aria-label="Button group with nested dropdown"
+                #partnersDrop="ngbDropdown">
+                <button type="button " class="btn btn-outline-primary top-nav-btn" ngbDropdownToggle (mouseenter)="partnersDrop.open() " (mouseenter)="companyDrop.close()">
+                    Partners
+                </button>
+                <div class="dropdown-menu" ngbDropdownMenu (mouseleave)="partnersDrop.close()">
+                    <button ngbDropdownItem>One</button>
+                    <button ngbDropdownItem>Two</button>
+                    <button ngbDropdownItem>Four!</button>
+                </div>
+            </div>
+            
+            <div
+                class="btn-group top-nav-el"
+                ngbDropdown
+                role="group"
+                aria-label="Button group with nested dropdown"
+                #companyDrop="ngbDropdown">
+                <button type="button" class="btn btn-outline-primary top-nav-btn" ngbDropdownToggle (mouseenter)="companyDrop.toggle()" (mouseenter)="partnersDrop.close()">
+                    Compnay
+                </button>
+                <div class="dropdown-menu" ngbDropdownMenu (mouseleave)="companyDrop.close()">
+                    <button ngbDropdownItem>four</button>
+                    <button ngbDropdownItem>five</button>
+                    <button ngbDropdownItem>six</button>
+                </div>
+            </div>
+            <div class="top-nav-el">Support</div>
+            <div
+                class="btn-group top-nav-el"
+                ngbDropdown
+                role="group"
+                aria-label="Button group with nested dropdown"
+                #globeDrop="ngbDropdown">
+                
+                <ion-icon name="globe-outline" type="button" class="globe btn btn-outline-primary top-nav-btn" ngbDropdownToggle (mouseenter)="globeDrop.toggle()" (mouseenter)="companyDrop.close()">
+                </ion-icon>
+                <div class="dropdown-menu" ngbDropdownMenu (mouseleave)="globeDrop.close()">
+                    <button ngbDropdownItem>seven</button>
+                    <button ngbDropdownItem>eight</button>
+                    <button ngbDropdownItem>nine</button>
+                </div>
+            </div>
+            <ion-icon name="search-outline" class="search globe mx-3"></ion-icon>
+        </div>
+        <div class="main-nav d-flex align-items-center justify-content-start">
+            <div class="d-flex align-items-center py-2 w-100">
+                <img src="https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg" class="me-3" alt="">
+                <h5 class="mx-3 nav-link">Products</h5>
+                <h5 class="mx-3 nav-link">Use Cases</h5>
+                <h5 class="mx-3 nav-link">Developer & Data Scientists</h5>
+                <h5 class="mx-3 nav-link">Learn</h5>
+                <h5 class="mx-3 nav-link">Pricing</h5>
+            </div>
+        </div>
+    </div>
+    
+</div>
