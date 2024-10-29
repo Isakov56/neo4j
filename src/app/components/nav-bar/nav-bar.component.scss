@@ -1,9 +1,11 @@
 .navbar{
     background-color: rgb(245, 255, 255);
+    position: relative;
 }
 
 .width{
     width: 1200px;
+    
 }
 .top-nav-el{
     margin-right: 14px;
@@ -81,4 +83,9 @@ img{
 
 .product-main-btns{
     cursor: pointer;
+}
+
+.products-dropdown{
+    background-color: rgb(252, 255, 247);
+    position: absolute;
 }

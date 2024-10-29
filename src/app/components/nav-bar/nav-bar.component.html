@@ -1,6 +1,6 @@
 <div class="navbar d-flex flex-column w-100 align-items-center justify-content-center">
-    <div class="width px-2 w-100">
-        <div class="top-nav d-flex align-items-center justify-content-end my-2 w-100 pe-5" >
+    <div class="width w-100 mx-5 px-5">
+        <div class="top-nav d-flex align-items-center justify-content-end my-2" >
             <div class="top-nav-el mx-2">Aura login</div>
             <div
                 class="btn-group top-nav-el"
@@ -51,78 +51,82 @@
             </div>
             <ion-icon name="search-outline" class="search globe mx-3"></ion-icon>
         </div>
-        <div class="main-nav d-flex flex-column justify-content-start mx-5 ps-5">
+        <div class="main-nav d-flex flex-column justify-content-start ">
             <div class="d-flex align-items-center py-2 w-100">
-                <img routerLink='/' src="https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg" class="me-3 logo" alt="">
+                <img routerLink='/' src="https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg" class="ms-3 me-3 logo" alt="">
                 <h5 class="mx-3 nav-link" (mouseenter)="showProducts()">Products</h5>
                 <h5 class="mx-3 nav-link">Use Cases</h5>
                 <h5 class="mx-3 nav-link">Developer & Data Scientists</h5>
                 <h5 class="mx-3 nav-link">Learn</h5>
                 <h5 class="mx-3 nav-link">Pricing</h5>
             </div>
-            <div *ngIf="productsDropdown" class="products-dropdown d-flex mt-2" (mouseenter)="showProducts()" (mouseleave)="hideProducts()">
-                <div class="product-left-btns">
-                    <div class="product-main-btn d-flex m-2">
-                        <div class="m-2 border p-2 product-main-btns" routerLink='/products/product1' (click)="hideProducts()">
-                            <h6>Noe4j Graph Database</h6>
-                            <p>Self or fully-managed, deploy anywhere</p>
-                        </div>
-                        <div class="m-2 border p-2 product-main-btns" routerLink='/products/product2' (click)="hideProducts()">
-                            <h6>Noe4j AuraDB</h6>
-                            <p>Fully-managed graph database as a service</p>
-                        </div>
-                    </div>
-                    <div class="product-secondary-btn m-2">
-                        <div class="border p-2 m-2">
-                            <h6>Noe4j Graph Data Science</h6>
-                            <p class="m-0">Graph Analysis and modeling platforms</p>
-                        </div>
-                        <div class="border p-2 m-2">
-                            <h6>Deplyment Center</h6>
-                            <p class="m-0">Get started. Download, integrate, and deploy</p>
-                        </div>
-                    </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div *ngIf="productsDropdown" class="products-dropdown d-flex border px-5" (mouseenter)="showProducts()" (mouseleave)="hideProducts()">
+    <div class="d-flex mx-5">
+        <div class="product-left-btns ">
+            <div class="product-main-btn d-flex m-2">
+                <div class="m-2 border p-2 product-main-btns" routerLink='/products/product1' (click)="hideProducts()">
+                    <h6>Noe4j Graph Database</h6>
+                    <p>Self or fully-managed, deploy anywhere</p>
                 </div>
-                <div class="product-right-btns graph-tools d-flex m-2">
-                    <div>
-                        <h5 class="ms-2">Graph-tools</h5>
-                        <div class="d-flex">
-                            <div class="m-2">
-                                <div>
-                                    <h6>Neo4j Developer Tools</h6>
-                                    <p>Tools to make graph application development easier</p>
-                                </div>
-                                <div>
-                                    <h6>Neo4j Developer Tools</h6>
-                                    <p>Tools to make graph application development easier</p>
-                                </div>
-                                <div>
-                                    <h6>Neo4j Developer Tools</h6>
-                                    <p>Tools to make graph application development easier</p>
-                                </div>
-                                
-                            </div>
-                            <div class="m-2">
-                                <div>
-                                    <h6>Neo4j Developer Tools</h6>
-                                    <p>Tools to make graph application development easier</p>
-                                </div>
-                                <div>
-                                    <h6>Neo4j Developer Tools</h6>
-                                    <p>Tools to make graph application development easier</p>
-                                </div>
-                                <div>
-                                    <h6>Neo4j Developer Tools</h6>
-                                    <p>Tools to make graph application development easier</p>
-                                </div>
-                            </div>
+                <div class="m-2 border p-2 product-main-btns" routerLink='/products/product2' (click)="hideProducts()">
+                    <h6>Noe4j AuraDB</h6>
+                    <p>Fully-managed graph database as a service</p>
+                </div>
+            </div>
+            <div class="product-secondary-btn m-2">
+                <div class="border p-2 m-2">
+                    <h6>Noe4j Graph Data Science</h6>
+                    <p class="m-0">Graph Analysis and modeling platforms</p>
+                </div>
+                <div class="border p-2 m-2">
+                    <h6>Deplyment Center</h6>
+                    <p class="m-0">Get started. Download, integrate, and deploy</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-right-btns graph-tools d-flex m-2">
+            <div>
+                <h5 class="ms-2">Graph-tools</h5>
+                <div class="d-flex">
+                    <div class="m-2">
+                        <div>
+                            <h6>Neo4j Developer Tools</h6>
+                            <p>Tools to make graph application development easier</p>
+                        </div>
+                        <div>
+                            <h6>Neo4j Developer Tools</h6>
+                            <p>Tools to make graph application development easier</p>
+                        </div>
+                        <div>
+                            <h6>Neo4j Developer Tools</h6>
+                            <p>Tools to make graph application development easier</p>
                         </div>
                         
                     </div>
-                    
-
+                    <div class="m-2">
+                        <div>
+                            <h6>Neo4j Developer Tools</h6>
+                            <p>Tools to make graph application development easier</p>
+                        </div>
+                        <div>
+                            <h6>Neo4j Developer Tools</h6>
+                            <p>Tools to make graph application development easier</p>
+                        </div>
+                        <div>
+                            <h6>Neo4j Developer Tools</h6>
+                            <p>Tools to make graph application development easier</p>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
+            
+    
         </div>
     </div>
     
