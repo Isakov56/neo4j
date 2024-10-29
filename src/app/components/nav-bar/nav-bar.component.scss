@@ -1,5 +1,5 @@
 .navbar{
-    background-color: aqua;
+    background-color: rgb(245, 255, 255);
 }
 
 .width{
@@ -19,6 +19,7 @@
 img{
     width: 104px;
     height: 37px;
+    cursor: pointer;
 }
 
 .top-nav-btn{
@@ -69,10 +70,15 @@ img{
 }
 
 .dropdown-menu.show{
-    inset: 0px -65px auto auto !important;
+    inset: 20px -65px auto auto !important;
 }
 
 .nav-link{
     font-weight: 380;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.product-main-btns{
+    cursor: pointer;
 }
