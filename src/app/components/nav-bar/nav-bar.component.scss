@@ -11,7 +11,7 @@
     margin-right: 14px;
     margin-left: 14px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .navbar.d-flex.flex-column{
@@ -77,8 +77,9 @@ img{
 
 .nav-link{
     font-weight: 380;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .product-main-btns{
@@ -88,4 +89,22 @@ img{
 .products-dropdown{
     background-color: rgb(252, 255, 247);
     position: absolute;
+}
+
+.dark-mode-toggle{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    bottom: 20px;
+    right: 20px;
+    box-shadow:  0px 0px 10px  0px;
+    cursor: pointer;
+}
+
+h6{
+    font-size: 20px;
 }

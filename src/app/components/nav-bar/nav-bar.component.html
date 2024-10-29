@@ -1,6 +1,6 @@
 <div class="navbar d-flex flex-column w-100 align-items-center justify-content-center">
     <div class="width w-100 mx-5 px-5">
-        <div class="top-nav d-flex align-items-center justify-content-end my-2" >
+        <div class="top-nav d-flex align-items-center justify-content-end mt-2 mb-4" >
             <div class="top-nav-el mx-2">Aura login</div>
             <div
                 class="btn-group top-nav-el"
@@ -51,8 +51,8 @@
             </div>
             <ion-icon name="search-outline" class="search globe mx-3"></ion-icon>
         </div>
-        <div class="main-nav d-flex flex-column justify-content-start ">
-            <div class="d-flex align-items-center py-2 w-100">
+        <div class="main-nav d-flex justify-content-between align-items-center my-2">
+            <div class="d-flex align-items-center ">
                 <img routerLink='/' src="https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg" class="ms-3 me-3 logo" alt="">
                 <h5 class="mx-3 nav-link" (mouseenter)="showProducts()">Products</h5>
                 <h5 class="mx-3 nav-link">Use Cases</h5>
@@ -60,7 +60,10 @@
                 <h5 class="mx-3 nav-link">Learn</h5>
                 <h5 class="mx-3 nav-link">Pricing</h5>
             </div>
-            
+            <div class=" d-flex">
+                <button mat-stroked-button class=" mx-2">Contact Us</button>
+                <button mat-flat-button class="me-2">Get Started Free</button>
+            </div>
         </div>
     </div>
     
@@ -130,4 +133,8 @@
         </div>
     </div>
     
+</div>
+
+<div class="dark-mode-toggle d-flex justify-content-center align-items-center">
+    dark mode 
 </div>
