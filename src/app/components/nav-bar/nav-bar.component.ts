@@ -1,9 +1,10 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, Renderer2 } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Renderer2, Inject  } from '@angular/core';
 import {ChangeDetectionStrategy,  signal} from '@angular/core';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
+import { Subject } from 'rxjs'
 
 @Component({
   selector: 'app-nav-bar',
@@ -27,14 +28,13 @@ export class NavBarComponent {
 
   isDarkTheme = false;
 
-  constructor(private renderer: Renderer2) {}
-
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
-    const themeClass = this.isDarkTheme ? 'dark-theme' : 'light-theme';
-    
-    // Remove existing theme class and add the new one
-    this.renderer.removeClass(document.body, this.isDarkTheme ? 'light-theme' : 'dark-theme');
-    this.renderer.addClass(document.body, themeClass);
+
+    if (this.isDarkTheme) {
+      document.body.classList.add('theme-dark');
+    } else {
+      document.body.classList.remove('theme-dark');
+    }
   }
 }

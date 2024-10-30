@@ -63,6 +63,8 @@
             <div class=" d-flex">
                 <button mat-stroked-button class=" mx-2">Contact Us</button>
                 <button mat-flat-button class="me-2">Get Started Free</button>
+                <button mat-button >Check</button>
+                <button mat-raised-button >Pitch</button>
             </div>
         </div>
     </div>
@@ -135,6 +137,6 @@
     
 </div>
 
-<div class="dark-mode-toggle d-flex justify-content-center align-items-center">
-    dark mode 
+<div class="dark-mode-toggle d-flex justify-content-center align-items-center" (click)="toggleTheme()">
+    Toggle  
 </div>
