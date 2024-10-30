@@ -1,6 +1,7 @@
 @use '@angular/material' as mat;
 //@use '@ng-matero/extensions' as mtx;
 @use 'app-theme';
+@use 'sass:map';
 
 @include mat.core();
 
@@ -14,7 +15,7 @@
 $light-config: (
   color: (
     theme-type: 'light',
-    primary: mat.$blue-palette,
+    primary: mat.$azure-palette,
     tertiary: mat.$blue-palette,
   ),
 );
@@ -22,6 +23,15 @@ $light-config: (
 $light-theme: mat.private-deep-merge-all(
   mat.define-theme($light-config),
   );
+
+//   $additional-light-colors: (
+//   secondary: mat.$red-palette,
+//   background: mat.$green-palette,
+//   surface: mat.$orange-palette,
+//   error: mat.$red-palette,
+//   neutral: mat.$yellow-palette,
+//   neutral-variant: mat.$blue-palette,
+// );
  // mtx.define-theme($light-config)
   
 html {
@@ -29,6 +39,8 @@ html {
   @include app-theme.theme($light-theme);
   
   @include mat.color-variants-backwards-compatibility($light-theme);
+  // Additional color application
+  // Example of secondary color use
 }
 // @include mtx.all-component-themes($light-theme);
 // @include mtx.color-variants-backwards-compatibility($light-theme);
