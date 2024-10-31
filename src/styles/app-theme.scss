@@ -16,6 +16,9 @@ html {
   $bg-color: mat.get-theme-color($theme,
     if(mat.get-theme-type($theme) == dark, surface-container-high, surface-container));
 
+    --navbar-background-color: #{if(mat.get-theme-type($theme) == dark, rgb(7, 13, 85) , rgb(197, 228, 255))};
+    --toggle-button-bg-color: #{if(mat.get-theme-type($theme)== dark, white, black)};
+    --toggle-button-color: #{if(mat.get-theme-type($theme)== dark, black, white)};
   --body-background-color: #{$bg-color};
   --link-color: #{mat.get-theme-color($theme, primary)};
   --link-hover-color: #{color.adjust(mat.get-theme-color($theme, primary), $lightness: -10%)};
@@ -25,7 +28,7 @@ html {
   --user-panel-background-color: #{$bg-color};
   --user-panel-hover-background-color: #{mat.get-theme-color($theme, surface-variant)};
   --sidemenu-heading-hover-background-color: #{mat.get-theme-color($theme, surface-container-highest)};
-  --sidemenu-active-heading-text-color: #{mat.get-theme-color($theme, primary)};
+  --sidemenu-active-heading-text-color: #{mat.get-theme-color($theme, tertiary)};
   --sidemenu-active-heading-background-color: #{mat.get-theme-color($theme, primary-container)};
   --sidemenu-active-heading-hover-background-color: #{mat.get-theme-color($theme, primary-container)};
   --sidemenu-expanded-background-color: #{$bg-color};

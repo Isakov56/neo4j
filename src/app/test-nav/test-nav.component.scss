@@ -1,11 +1,14 @@
 .sidenav-container {
   height: 100%;
   z-index: 99999 !important;
+  background-color: var(--body-background-color);
+  position: relative;
 }
 
 .sidenav {
   width: 200px;
   z-index: 99999 !important;
+  background-color: var(--navbar-background-color);
 }
 
 .sidenav .mat-toolbar {
@@ -15,7 +18,8 @@
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 9999;
+  background-color: var(--navbar-background-color);
 }
 
 .dark-mode-toggle{
@@ -23,8 +27,8 @@
   height: 5rem;
   border-radius: 50%;
   position: absolute;
-  background-color: black;
-  color: white;
+  background-color: var(--toggle-button-bg-color);
+  color: var(--toggle-button-color);
   font-size: 12px;
   bottom: 20px;
   right: 20px;
