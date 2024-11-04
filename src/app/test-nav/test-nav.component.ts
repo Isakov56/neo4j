@@ -7,14 +7,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
-import { TestComponentComponent } from '../test-component/test-component.component';
-import { TestFormComponent } from '../test-form/test-form.component';                              
-import { TestDashboardComponent } from '../test-dashboard/test-dashboard.component';
+import { map, shareReplay } from 'rxjs/operators';                          
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule  } from '@angular/router';
+
 
 @Component({
   selector: 'app-test-nav',
@@ -27,14 +25,10 @@ import { FormsModule } from '@angular/forms';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    AsyncPipe,
-    TestComponentComponent,
-    TestFormComponent,
-    TestDashboardComponent,
     DragDropModule,
-    NgbDatepickerModule,
     CommonModule,
     FormsModule,
+    RouterModule,
   ],
   providers: [],
 })
@@ -85,24 +79,5 @@ export class TestNavComponent {
       document.body.classList.remove('theme-dark');
     }
   }
-  constructor(private modalService: NgbModal) {}
-
-  open(content: TemplateRef<any>): void {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
-  }
-  navbarColor: string = '#1976d2'; // Default color (primary color)
-
-  // Change the parameter type to Event
-  onColorChange(event: Event) {
-    const input = event.target as HTMLInputElement; // Cast to HTMLInputElement
-    const color = input.value; // Get the value (the selected color)
-    
-    // Update the CSS variable for the navbar background color
-    document.documentElement.style.setProperty('--navbar-background-color', color);
-  }
-
-  saveColor(modal: any) {
-    // Optionally, close the modal and perform other actions here
-    modal.close('Save click');
-  }
+  
 }

@@ -8,3 +8,4 @@ export default [
     {path: 'product2', component: Product2Component},
     {path: 'product3', component: Product3Component}
 ] satisfies Route[]
+

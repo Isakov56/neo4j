@@ -3,6 +3,7 @@ import { MatTableModule, MatTable } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatSortModule, MatSort } from '@angular/material/sort';
 import { TestComponentDataSource, TestComponentItem } from './test-component-datasource';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-test-component',

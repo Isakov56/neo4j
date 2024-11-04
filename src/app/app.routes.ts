@@ -2,12 +2,14 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: '',
-        loadComponent: () => import('./components/main-page/main-page.component')
-        .then(c => c.MainPageComponent)
+        path: 'test',
+        loadComponent: () => import('./test-buttons/test-buttons.component')
+        .then(c => c.TestButtonsComponent),
+        loadChildren: () => import('./test-buttons/test-nav.routes')
     },
     {
-        path: 'products',
-        loadChildren: () => import('./components/nav-bar/products/products.routes')
+        path: 'table',
+        loadComponent: () => import('./test-component/test-component.component')
+        .then(c => c.TestComponentComponent)
     }
 ];
