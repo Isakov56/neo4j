@@ -34,7 +34,7 @@ import { FormsModule } from '@angular/forms';
     DragDropModule,
     NgbDatepickerModule,
     CommonModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
 })

@@ -176,7 +176,7 @@
           </div>
           <button
             class="btn btn-lg btn-outline-primary"
-            (click)="open(content)"
+            (click)="open(modalContent)"
           >
             Launch demo modal
           </button>
@@ -193,18 +193,14 @@
       Toggle
     </div>
     <div>
-      <ng-template class="my-modal" #content let-modal>
+      <ng-template #modalContent let-modal>
         <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-          <button
-            type="button"
-            class="btn-close"
-            aria-label="Close"
-            (click)="modal.dismiss('Cross click')"
-          ></button>
+          <h4 class="modal-title">Simple Modal</h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <p>This is a simple modal body.</p>
+          <div>
             <div class="mb-3">
               <label for="dateOfBirth">pick a theme color</label>
               <input
@@ -214,16 +210,10 @@
             (change)="onColorChange($event)"
           />
             </div>
-          </form>
+          </div>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-outline-secondary"
-            (click)="modal.close('Save click')"
-          >
-            Save
-          </button>
+          <button type="button" class="btn btn-secondary" (click)="modal.close()">Close</button>
         </div>
       </ng-template>
     </div>
