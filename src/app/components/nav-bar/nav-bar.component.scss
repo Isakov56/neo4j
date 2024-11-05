@@ -29,18 +29,19 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  position: sticky;
+  // position: sticky;
   background-color: var(--navbar-background-color);
   color: var(--toggle-button-bg-color);
   font-size: 14px;
   box-shadow:  0px 0px 18px  -8px var(--toggle-button-bg-color);
   z-index: 2;
+  position: absolute;
+  right: 80px !important;
+  bottom: 80px;
 }
 
-.draggable-item {
-  position: sticky;
-  bottom: 500px;
-  right: 500px !important;
+.boundary-container{
+  height: 100% !important;
 }
 
 section {

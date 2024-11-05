@@ -15,25 +15,28 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" class="px-4">
       <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
+        class="ms-5"
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
 
       <span routerLink="/" style="cursor: pointer;">neo4j</span>
+
     </mat-toolbar>
     <!-- ----------- -->
-    <div class="m-5 px-5">
+    <div class="m-5 px-5 boundary-container" #boundaryContainer>
 
       <router-outlet></router-outlet>
       <div
       cdkDrag
-      class="dark-mode-toggle draggable-item d-flex justify-content-center align-items-center"
+      [cdkDragBoundary]="boundaryContainer"
+      class="dark-mode-toggle d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-4"
       (click)="toggleTheme()"
       >
       Toggle
