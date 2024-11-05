@@ -3,8 +3,8 @@ import { TestDashboardComponent } from "../test-dashboard/test-dashboard.compone
 import { TestFormComponent } from "../test-form/test-form.component";
 import { RouteTestComponent } from "../route-test/route-test.component";
 
-export default [
+export const TEST_ROUTES: Route[] = [
     {path: 'dash-board', component: TestDashboardComponent},
     {path: 'form', component: TestFormComponent},
     {path: 'route-test', component: RouteTestComponent}
-] satisfies Route[]
+] 
