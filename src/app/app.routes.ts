@@ -3,22 +3,22 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: '',
-        loadComponent: () => import('./test-buttons/test-buttons.component')
+        loadComponent: () => import('./components/test-buttons/test-buttons.component')
         .then(c => c.TestButtonsComponent),
         children: [
             {
                 path: 'dash-board',
-                loadComponent: () => import('./test-dashboard/test-dashboard.component')
+                loadComponent: () => import('./components/test-dashboard/test-dashboard.component')
                     .then(m => m.TestDashboardComponent)
             },
             {
                 path: 'form',
-                loadComponent: () => import('./test-form/test-form.component')
+                loadComponent: () => import('./components/test-form/test-form.component')
                     .then(m => m.TestFormComponent)
             },
             {
                 path: 'route-test',
-                loadComponent: () => import('./route-test/route-test.component')
+                loadComponent: () => import('./components/route-test/route-test.component')
                     .then(m => m.RouteTestComponent)
             }
         ]
@@ -30,7 +30,7 @@ export const routes: Routes = [
     // },
     {
         path: 'table',
-        loadComponent: () => import('./test-component/test-component.component')
-        .then(c => c.TestComponentComponent)
+        loadComponent: () => import('./components/device-management/device-management.component')
+        .then(c => c.DeviceManagementComponent)
     }
 ];

@@ -7,12 +7,12 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-test-component',
-  templateUrl: './test-component.component.html',
-  styleUrl: './test-component.component.scss',
+  templateUrl: './device-management.component.html',
+  styleUrl: './device-management.component.scss',
   standalone: true,
   imports: [MatTableModule, MatPaginatorModule, MatSortModule]
 })
-export class TestComponentComponent implements AfterViewInit {
+export class DeviceManagementComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<TestComponentItem>;

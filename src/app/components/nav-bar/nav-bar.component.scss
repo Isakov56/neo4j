@@ -1,110 +1,76 @@
-.navbar{
-    background-color: rgb(245, 255, 255);
+.sidenav-container {
+  height: 100%;
+  background-color: var(--body-background-color);
+  // overflow: auto;
 }
 
-.width{
-    width: 1200px;
-    
-}
-.top-nav-el{
-    margin-right: 14px;
-    margin-left: 14px;
-    cursor: pointer;
-    font-size: 14px;
+.modal{
+  z-index: 9999 !important;
 }
 
-.navbar.d-flex.flex-column{
-    flex-direction: row !important;
+.sidenav {
+  width: 200px;
+  background-color: var(--navbar-background-color);
+  border-radius: 0%;
 }
 
-img{
-    width: 104px;
-    height: 37px;
-    cursor: pointer;
+.sidenav .mat-toolbar {
+  background: inherit;
 }
 
-.top-nav-btn{
-    border: none !important;
-    background-color: transparent;
-    color: black;
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--navbar-background-color);
 }
 
-.top-nav-btn:hover{
-    background-color: transparent;
-    color: black;
+.dark-mode-toggle{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: sticky;
+  background-color: var(--navbar-background-color);
+  color: var(--toggle-button-bg-color);
+  font-size: 14px;
+  box-shadow:  0px 0px 18px  -8px var(--toggle-button-bg-color);
+  z-index: 2;
 }
 
-.top-nav-btn:focus{
-    background-color: transparent;
-    color: black;
-    outline: none; /* Remove the outline */
-    box-shadow: none; /* Remove the box shadow */
+.draggable-item {
+  position: sticky;
+  bottom: 500px;
+  right: 500px !important;
 }
 
-.top-nav-btn:focus-visible{
-    background-color: transparent;
-    color: black;
-    border: none !important;
-    outline: none; /* Remove the outline */
-    box-shadow: none; /* Remove the box shadow */
+section {
+  display: table;
 }
 
-.top-nav-btn:active{
-    background-color: transparent;
-    color: black;
-    border: none !important;
-    outline: none; /* Remove the outline */
-    box-shadow: none; /* Remove the box shadow */
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
 }
 
-.globe.top-nav-btn{
-    width: 1.4rem;
-    height: 1.4rem;
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
 }
 
-.globe{
-    width: 1.4rem;
-    height: 1.4rem;
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
 }
 
-.dropdown-menu.show{
-    inset: 20px -65px auto auto !important;
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.nav-link{
-    font-weight: 380;
-    font-size: 17px;
-    cursor: pointer;
-    margin-bottom: 0;
-}
-
-.product-main-btns{
-    cursor: pointer;
-}
-
-.products-dropdown{
-    background-color: rgb(252, 255, 247);
-    position: absolute;
-}
-
-// .dark-mode-toggle{
-//     width: 5rem;
-//     height: 5rem;
-//     border-radius: 50%;
-//     position: absolute;
-//     background-color: black;
-//     color: white;
-//     font-size: 12px;
-//     bottom: 20px;
-//     right: 20px;
-//     box-shadow:  0px 0px 10px  0px;
-//     cursor: pointer;
-//     z-index: 9999;
-// }
-
-h6{
-    font-size: 20px;
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
 }

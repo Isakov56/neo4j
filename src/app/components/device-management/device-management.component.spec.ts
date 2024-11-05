@@ -1,11 +1,11 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { TestComponentComponent } from './test-component.component';
+import { DeviceManagementComponent } from './device-management.component';
 
-describe('TestComponentComponent', () => {
-  let component: TestComponentComponent;
-  let fixture: ComponentFixture<TestComponentComponent>;
+describe('DeviceManagementComponent', () => {
+  let component: DeviceManagementComponent;
+  let fixture: ComponentFixture<DeviceManagementComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -14,7 +14,7 @@ describe('TestComponentComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TestComponentComponent);
+    fixture = TestBed.createComponent(DeviceManagementComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

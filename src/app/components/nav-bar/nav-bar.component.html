@@ -1,142 +1,47 @@
-<!-- <div class="navbar d-flex flex-column w-100 align-items-center justify-content-center">
-    <div class="width w-100 mx-5 px-5">
-        <div class="top-nav d-flex align-items-center justify-content-end mt-2 mb-4" >
-            <div class="top-nav-el mx-2">Aura login</div>
-            <div
-                class="btn-group top-nav-el"
-                ngbDropdown
-                role="group"
-                aria-label="Button group with nested dropdown"
-                #partnersDrop="ngbDropdown">
-                <button type="button " class="btn btn-outline-primary top-nav-btn" ngbDropdownToggle (mouseenter)="partnersDrop.open() " (mouseenter)="companyDrop.close()">
-                    Partners
-                </button>
-                <div class="dropdown-menu" ngbDropdownMenu (mouseleave)="partnersDrop.close()">
-                    <button ngbDropdownItem>One</button>
-                    <button ngbDropdownItem>Two</button>
-                    <button ngbDropdownItem>Four!</button>
-                </div>
-            </div>
-            
-            <div
-                class="btn-group top-nav-el"
-                ngbDropdown
-                role="group"
-                aria-label="Button group with nested dropdown"
-                #companyDrop="ngbDropdown">
-                <button type="button" class="btn btn-outline-primary top-nav-btn" ngbDropdownToggle (mouseenter)="companyDrop.toggle()" (mouseenter)="partnersDrop.close()" (mouseenter)="globeDrop.close()" >
-                    Compnay
-                </button>
-                <div class="dropdown-menu" ngbDropdownMenu (mouseleave)="companyDrop.close()">
-                    <button ngbDropdownItem>four</button>
-                    <button ngbDropdownItem>five</button>
-                    <button ngbDropdownItem>six</button>
-                </div>
-            </div>
-            <div class="top-nav-el">Support</div>
-            <div
-                class="btn-group top-nav-el"
-                ngbDropdown
-                role="group"
-                aria-label="Button group with nested dropdown"
-                #globeDrop="ngbDropdown">
-                
-                <ion-icon name="globe-outline" type="button" class="globe btn btn-outline-primary top-nav-btn" ngbDropdownToggle (mouseenter)="globeDrop.toggle()" (mouseenter)="companyDrop.close()">
-                </ion-icon>
-                <div class="dropdown-menu" ngbDropdownMenu (mouseleave)="globeDrop.close()">
-                    <button ngbDropdownItem>seven</button>
-                    <button ngbDropdownItem>eight</button>
-                    <button ngbDropdownItem>nine</button>
-                </div>
-            </div>
-            <ion-icon name="search-outline" class="search globe mx-3"></ion-icon>
-        </div>
-        <div class="main-nav d-flex justify-content-between align-items-center my-2">
-            <div class="d-flex align-items-center ">
-                <img routerLink='/' src="https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg" class="ms-3 me-3 logo" alt="">
-                <h5 class="mx-3 nav-link" (mouseenter)="showProducts()">Products</h5>
-                <h5 class="mx-3 nav-link">Use Cases</h5>
-                <h5 class="mx-3 nav-link">Developer & Data Scientists</h5>
-                <h5 class="mx-3 nav-link">Learn</h5>
-                <h5 class="mx-3 nav-link">Pricing</h5>
-            </div>
-            <div class=" d-flex">
-                <button mat-stroked-button class=" mx-2">Contact Us</button>
-                <button mat-flat-button class="me-2">Get Started Free</button>
-                <button mat-button >Check</button>
-                <button mat-raised-button >Pitch</button>
-            </div>
-        </div>
-    </div>
-    
-</div>
-<div *ngIf="productsDropdown" class="products-dropdown d-flex border px-5" (mouseenter)="showProducts()" (mouseleave)="hideProducts()">
-    <div class="d-flex mx-5">
-        <div class="product-left-btns ">
-            <div class="product-main-btn d-flex m-2">
-                <div class="m-2 border p-2 product-main-btns" routerLink='/products/product1' (click)="hideProducts()">
-                    <h6>Noe4j Graph Database</h6>
-                    <p>Self or fully-managed, deploy anywhere</p>
-                </div>
-                <div class="m-2 border p-2 product-main-btns" routerLink='/products/product2' (click)="hideProducts()">
-                    <h6>Noe4j AuraDB</h6>
-                    <p>Fully-managed graph database as a service</p>
-                </div>
-            </div>
-            <div class="product-secondary-btn m-2">
-                <div class="border p-2 m-2">
-                    <h6>Noe4j Graph Data Science</h6>
-                    <p class="m-0">Graph Analysis and modeling platforms</p>
-                </div>
-                <div class="border p-2 m-2">
-                    <h6>Deplyment Center</h6>
-                    <p class="m-0">Get started. Download, integrate, and deploy</p>
-                </div>
-            </div>
-        </div>
-        <div class="product-right-btns graph-tools d-flex m-2">
-            <div>
-                <h5 class="ms-2">Graph-tools</h5>
-                <div class="d-flex">
-                    <div class="m-2">
-                        <div>
-                            <h6>Neo4j Developer Tools</h6>
-                            <p>Tools to make graph application development easier</p>
-                        </div>
-                        <div>
-                            <h6>Neo4j Developer Tools</h6>
-                            <p>Tools to make graph application development easier</p>
-                        </div>
-                        <div>
-                            <h6>Neo4j Developer Tools</h6>
-                            <p>Tools to make graph application development easier</p>
-                        </div>
-                        
-                    </div>
-                    <div class="m-2">
-                        <div>
-                            <h6>Neo4j Developer Tools</h6>
-                            <p>Tools to make graph application development easier</p>
-                        </div>
-                        <div>
-                            <h6>Neo4j Developer Tools</h6>
-                            <p>Tools to make graph application development easier</p>
-                        </div>
-                        <div>
-                            <h6>Neo4j Developer Tools</h6>
-                            <p>Tools to make graph application development easier</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-    
-        </div>
-    </div>
-    
-</div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    mode="side"
+    [opened]="false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
 
-<div class="dark-mode-toggle d-flex justify-content-center align-items-center" (click)="toggleTheme()">
-    Toggle  
-</div> -->
+      <span routerLink="/" style="cursor: pointer;">neo4j</span>
+    </mat-toolbar>
+    <!-- ----------- -->
+    <div class="m-5 px-5">
+
+      <router-outlet></router-outlet>
+      <div
+      cdkDrag
+      class="dark-mode-toggle draggable-item d-flex justify-content-center align-items-center"
+      (click)="toggleTheme()"
+      >
+      Toggle
+    </div>
+  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+

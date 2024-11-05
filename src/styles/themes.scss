@@ -1,13 +1,8 @@
 @use '@angular/material' as mat;
-//@use '@ng-matero/extensions' as mtx;
 @use 'app-theme';
 @use 'sass:map';
 
 @include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
 
 //
 // Light theme
@@ -23,32 +18,15 @@ $light-config: (
 $light-theme: mat.private-deep-merge-all(
   mat.define-theme($light-config),
   );
-
-//   $additional-light-colors: (
-//   secondary: mat.$red-palette,
-//   background: mat.$green-palette,
-//   surface: mat.$orange-palette,
-//   error: mat.$red-palette,
-//   neutral: mat.$yellow-palette,
-//   neutral-variant: mat.$blue-palette,
-// );
- // mtx.define-theme($light-config)
   
 html {
   @include mat.all-component-themes($light-theme);
   @include app-theme.theme($light-theme);
   
   @include mat.color-variants-backwards-compatibility($light-theme);
-  // Additional color application
-  // Example of secondary color use
-}
-// @include mtx.all-component-themes($light-theme);
-// @include mtx.color-variants-backwards-compatibility($light-theme);
 
-//////////////////////////////////////////////////////////////////////////////////////
-// When we use the Schematics (`ng add`) to start, the following variables will be  //
-// used to create a dark theme! This strategy will not generate redundant codes.    //
-//////////////////////////////////////////////////////////////////////////////////////
+}
+
 
 //
 // Dark theme
@@ -64,7 +42,6 @@ $dark-config: (
 $dark-theme: mat.private-deep-merge-all(
   mat.define-theme($dark-config),
   );
-//   mtx.define-theme($dark-config)
 
 .theme-dark {
   color-scheme: dark;
@@ -74,5 +51,3 @@ $dark-theme: mat.private-deep-merge-all(
   
   @include mat.color-variants-backwards-compatibility($dark-theme);
 }
-// @include mtx.all-component-colors($dark-theme);
-// @include mtx.color-variants-backwards-compatibility($dark-theme);
